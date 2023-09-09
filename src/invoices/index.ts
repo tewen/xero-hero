@@ -1,0 +1,1 @@
+export { getInvoiceLink } from './links';
