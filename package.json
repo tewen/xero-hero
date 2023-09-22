@@ -1,6 +1,6 @@
 {
   "name": "xero-hero",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "files": [
     "dist",
@@ -18,7 +18,10 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup ./src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "test:watch": "npm test -- --watch",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "repository": {
     "type": "git",
@@ -39,6 +42,11 @@
     "xero-node": "^4.36.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "eslint-config-ethang": "^11.0.0",
+    "eslint-plugin-jest": "^27.4.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
     "xero-node": "^4.36.0"
