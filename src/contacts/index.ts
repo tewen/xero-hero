@@ -1,0 +1,1 @@
+export { getContactLink } from './links';
