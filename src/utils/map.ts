@@ -14,8 +14,9 @@ export const keyBy = <T extends Record<string, any>>(
   return (ar || []).reduce(
     (accumulator, item) => {
       const key = getKey(item, property);
-      /* eslint-disable-next-line functional/immutable-data */
+      /* eslint-disable functional/immutable-data */
       accumulator[key] = item;
+      /* eslint-enable functional/immutable-data */
       return accumulator;
     },
     {} as Record<string, T>,
