@@ -1,6 +1,6 @@
 import { ManualJournal } from 'xero-node';
 
-import { getManualJournalLink } from '../../';
+import { getManualJournalLink } from '../../../index';
 
 describe('journals/links', () => {
   describe('getManualJournalLink()', () => {

@@ -1,6 +1,6 @@
 import { Contact } from 'xero-node';
 
-import { getContactLink } from '../../';
+import { getContactLink } from '../../../index';
 
 describe('contacts/links', () => {
   describe('getContactLink()', () => {

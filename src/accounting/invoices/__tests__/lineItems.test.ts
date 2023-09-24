@@ -1,6 +1,6 @@
 import { LineItem } from 'xero-node';
 
-import { filterInvoiceLineItems } from '../../';
+import { filterInvoiceLineItems } from '../../../index';
 
 const generateLineItemsWithCodes = (
   itemCodes: (string | number)[],
