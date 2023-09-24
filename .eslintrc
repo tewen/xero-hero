@@ -8,8 +8,10 @@
   },
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "unicorn/filename-case": "off",
     "unicorn/no-array-callback-reference": "off",
-    "unicorn/prefer-spread": "off"
+    "unicorn/prefer-spread": "off",
+    "unicorn/no-array-reduce": "off"
   }
 }

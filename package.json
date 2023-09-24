@@ -52,6 +52,7 @@
     "xero-node": "^4.36.0"
   },
   "dependencies": {
-    "deep-cuts": "^2.8.0"
+    "deep-cuts": "^2.8.0",
+    "qs": "^6.11.2"
   }
 }
