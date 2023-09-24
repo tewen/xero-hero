@@ -1,7 +1,7 @@
 import { isNil } from 'deep-cuts';
 import type { LineItem } from 'xero-node';
 
-import type { DecisionFunction } from '../types';
+import type { DecisionFunction } from '../../types';
 
 export const filterInvoiceLineItems = (
   lineItems: LineItem[],

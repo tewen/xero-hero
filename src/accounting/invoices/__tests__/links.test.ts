@@ -1,6 +1,6 @@
 import { Invoice } from 'xero-node';
 
-import { getInvoiceLink } from '../../';
+import { getInvoiceLink } from '../../../index';
 
 describe('invoices/links', () => {
   describe('getInvoiceLink()', () => {
