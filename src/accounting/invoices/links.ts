@@ -1,8 +1,11 @@
-import { Invoice } from 'xero-node';
+import type { Invoice } from 'xero-node';
+
+import { hasProperty } from '../../utils/properties';
 
 export const getInvoiceLink = (invoice: Invoice | string): string => {
   return `https://invoicing.xero.com/view/${
-    (invoice instanceof Invoice ? invoice.invoiceID : invoice) ||
-    'null-or-empty-invoice-id'
+    (hasProperty(invoice, 'invoiceID')
+      ? (invoice as Invoice).invoiceID
+      : invoice) || 'null-or-empty-invoice-id'
   }`;
 };
