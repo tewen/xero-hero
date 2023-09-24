@@ -7,4 +7,4 @@ export { filterInvoiceLineItems, getInvoiceLink } from './accounting/invoices';
 // Journals
 export { getManualJournalLink } from './accounting/journals';
 // Projects
-export { generateProjectAmountUSD } from './projects';
+export { generateProjectAmountUSD, hoursFromTimeEntries } from './projects';

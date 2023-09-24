@@ -1,6 +1,6 @@
 import { ManualJournal } from 'xero-node';
 
-import { getManualJournalLink } from '../../../index';
+import { getManualJournalLink } from '../../../';
 
 describe('journals/links', () => {
   describe('getManualJournalLink()', () => {
@@ -37,6 +37,14 @@ describe('journals/links', () => {
     it('returns the correct URL for a string manual journal ID', () => {
       expect(getManualJournalLink('sdfhj-47629-sjdgdd')).toBe(
         'https://go.xero.com/Journal/View.aspx?invoiceID=sdfhj-47629-sjdgdd',
+      );
+    });
+
+    it('should work with an object that matches the interface for having a manualJournalID property', () => {
+      const manualJournal = { manualJournalID: '25OR6TO4' };
+      // @ts-expect-error - This is an invalid type for the function.
+      expect(getManualJournalLink(manualJournal)).toBe(
+        'https://go.xero.com/Journal/View.aspx?invoiceID=25OR6TO4',
       );
     });
   });

@@ -39,5 +39,14 @@ describe('contacts/links', () => {
         'https://go.xero.com/app/!kR4N6/contacts/contact/kooolaid-9086-t728',
       );
     });
+
+    it('should work with an object that matches the interface for having a contactID property', () => {
+      const contact = {
+        contactID: '25OR6TO4',
+      };
+      expect(getContactLink(contact)).toBe(
+        'https://go.xero.com/app/!kR4N6/contacts/contact/25OR6TO4',
+      );
+    });
   });
 });

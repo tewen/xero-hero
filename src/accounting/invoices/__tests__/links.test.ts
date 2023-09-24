@@ -39,5 +39,12 @@ describe('invoices/links', () => {
         'https://invoicing.xero.com/view/kooolaid-9086-t728',
       );
     });
+
+    it('should work with an object that matches the interface for having a invoiceID property', () => {
+      const invoice = { invoiceID: '25OR6TO4' };
+      expect(getInvoiceLink(invoice)).toBe(
+        'https://invoicing.xero.com/view/25OR6TO4',
+      );
+    });
   });
 });
