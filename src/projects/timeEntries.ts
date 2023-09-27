@@ -1,5 +1,6 @@
 import { roundToNearestFraction } from 'deep-cuts';
-import type { TimeEntry } from 'xero-node/dist/gen/model/projects/timeEntry';
+
+import type { TimeEntry } from './shimTypes';
 
 export const hoursFromTimeEntries = (
   timeEntries: TimeEntry[],
