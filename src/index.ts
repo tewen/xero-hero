@@ -1,5 +1,7 @@
 // Common
 export { dateInWhereFormat } from './common';
+// Attachments
+export { createInvoiceAttachment } from './accounting/attachments';
 // Contacts
 export { getContactLink } from './accounting/contacts';
 // Invoices
