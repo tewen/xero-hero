@@ -28,6 +28,27 @@ console.log(formattedDate); // DateTime(2020, 12, 31)
 
 You can read more about the Accounting API [here](https://developer.xero.com/documentation/api/accounting/overview).
 
+### Attachments
+
+You can read more about the Attachments API [here](https://developer.xero.com/documentation/api/attachments/overview).
+
+#### Methods
+
+##### createInvoiceAttachment(client:XeroClient, tenantId:string, { invoiceId:string, fileName:string, contents:Buffer })
+
+Creates an attachment for an invoice.
+
+```TypeScript
+import { createInvoiceAttachment } from 'xero-hero';
+
+const invoice = await getMyInvoice();
+const attachment = await createInvoiceAttachment(xero, tenantId, {
+  invoiceId: invoice.invoiceId,
+  fileName: 'my-attachment.pdf',
+  contents: fs.readFileSync('my-attachment.pdf'),
+});
+```
+
 ### Contacts
 
 You can read more about the Contacts API [here](https://developer.xero.com/documentation/api/contacts/overview).
