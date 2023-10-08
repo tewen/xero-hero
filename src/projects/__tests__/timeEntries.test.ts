@@ -1,6 +1,5 @@
-import { TimeEntry } from 'xero-node/dist/gen/model/projects/timeEntry';
-
 import { hoursFromTimeEntries } from '../../';
+import type { TimeEntry } from '../shimTypes';
 
 describe('projects/timeEntries', () => {
   describe('hoursFromTimeEntries()', () => {
@@ -39,9 +38,9 @@ describe('projects/timeEntries', () => {
 
     it('should play nice with a non-default denominator for rounding', () => {
       /* eslint-disable functional/immutable-data */
-      const timeEntryA = new TimeEntry();
+      const timeEntryA = {} as unknown as TimeEntry;
       timeEntryA.duration = 60;
-      const timeEntryB = new TimeEntry();
+      const timeEntryB = {} as unknown as TimeEntry;
       timeEntryB.duration = 23;
       /* eslint-enable functional/immutable-data */
       const timeEntries = [timeEntryA, timeEntryB];
@@ -65,8 +64,8 @@ describe('projects/timeEntries', () => {
 
     it('should sub in 0 when a Time Entry is missing a duration', () => {
       /* eslint-disable functional/immutable-data */
-      const timeEntryA = new TimeEntry();
-      const timeEntryB = new TimeEntry();
+      const timeEntryA = {} as unknown as TimeEntry;
+      const timeEntryB = {} as unknown as TimeEntry;
       timeEntryB.duration = 23;
       /* eslint-enable functional/immutable-data */
       const timeEntries = [timeEntryA, timeEntryB];

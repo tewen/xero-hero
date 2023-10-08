@@ -1,10 +1,9 @@
-import { Amount } from 'xero-node/dist/gen/model/projects/amount';
-import { CurrencyCode } from 'xero-node/dist/gen/model/projects/currencyCode';
+import type { Amount, CurrencyCode } from './shimTypes';
 
 export const generateProjectAmountUSD = (value: number): Amount => {
-  const amount = new Amount();
+  const amount = {} as Amount;
   /* eslint-disable functional/immutable-data */
-  amount.currency = CurrencyCode.USD;
+  amount.currency = 'USD' as unknown as CurrencyCode;
   amount.value = value;
   /* eslint-enable functional/immutable-data */
   return amount;

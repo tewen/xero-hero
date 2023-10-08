@@ -1,6 +1,6 @@
 {
   "name": "xero-hero",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "",
   "files": [
     "dist",
@@ -45,6 +45,7 @@
     "@types/jest": "^29.5.5",
     "@types/luxon": "^3.3.2",
     "@types/qs": "^6.9.8",
+    "@types/uuid": "^9.0.5",
     "eslint-config-ethang": "^11.0.0",
     "eslint-plugin-jest": "^27.4.0",
     "jest": "^29.7.0",
@@ -52,10 +53,12 @@
     "ts-jest": "^29.1.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
+    "uuid": "^9.0.1",
     "xero-node": "^4.36.0"
   },
   "dependencies": {
     "deep-cuts": "^2.8.0",
-    "qs": "^6.11.2"
+    "qs": "^6.11.2",
+    "tranquil-stream": "^0.1.0"
   }
 }
