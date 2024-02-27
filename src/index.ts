@@ -1,5 +1,5 @@
 // Common
-export { dateInWhereFormat } from './common';
+export { dateInWhereFormat, getListFromResponse } from './common';
 // Attachments
 export { createInvoiceAttachment } from './accounting/attachments';
 // Contacts
